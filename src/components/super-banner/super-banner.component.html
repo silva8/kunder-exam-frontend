@@ -1,0 +1,30 @@
+<div 
+*ngIf="banner && banner.show"
+[ngStyle]="{'background-image': 'url(' + banner.backgroundImg + ')'}" 
+class="banner-container">
+  <div *ngIf="banner.type === 'plan'" class="banner-item">
+    <label class="banner-title">
+      {{ banner.productDescription }}
+    </label>
+  </div>
+  <div *ngIf="banner.type === 'plan'" class="banner-item">
+    <button class="banner-button">
+      <a [href]="banner.link">
+        {{ banner.buttonText }}
+      </a>
+    </button>
+  </div>
+  <div 
+  *ngIf="banner.type === 'cellphone'" 
+  class="banner-item green-shape">
+    <img [src]="banner.productImg" class="banner-img">
+  </div>
+  <div *ngIf="banner.type === 'cellphone'" class="banner-item">
+    <label class="banner-name">
+      {{ banner.productName }}
+    </label>
+    <label class="banner-description">
+      {{ banner.productDescription }}
+    </label>
+  </div>
+</div>

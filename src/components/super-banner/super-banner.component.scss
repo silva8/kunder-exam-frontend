@@ -1,0 +1,92 @@
+.banner-container {
+        width: 80%;
+        height: 20vh;
+        margin: 15px auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+}
+
+.banner-item {
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 300px;
+}
+
+.banner-title {
+        font-family: 'Lobster', cursive;
+        font-size: 2em;
+        color: white;
+}
+
+.banner-name {
+        font-family: 'Luckiest Guy', cursive;
+        font-size: 2em;
+}
+
+.banner-description {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.5em;
+}
+
+.banner-img {
+        max-height: 20vh;
+        width: auto;
+        margin: 5px;
+}
+
+.green-shape {
+        position: relative;
+        background-color: transparent;
+}
+
+.green-shape::before {
+        content: " ";
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        z-index: -1;
+        background-repeat: no-repeat;
+        background-position: left top;
+        background-image: url(../../assets/imgs/green-shape.svg);
+}
+
+.banner-button {
+        width: 150px;
+        height: 40px;
+        color: white;
+        background-color: #20cd6a;
+        border-radius: 3px;
+}
+
+.banner-button a {
+        color: white;
+        font-size: 14px;
+        text-decoration:none;
+}
+
+@media only screen and (max-width: 820px) {
+        .banner-name,
+        .banner-title {
+                font-size: 1.5em;
+        }
+        .banner-description {
+                font-size: 1em;
+        }
+}
+
+@media only screen and (max-width: 600px) {
+        .banner-name,
+        .banner-title {
+                font-size: 1em;
+        }
+        .banner-description {
+                font-size: 0.9em;
+        }
+}
