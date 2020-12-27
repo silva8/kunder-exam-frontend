@@ -19,6 +19,7 @@ export class SuperBannerComponent implements OnInit {
   async getBanner() {
     let data = await this.bannerService.getBannerData().toPromise();
     this.banner = data['product'];
+    console.log(this.banner);
   }
 
 }
