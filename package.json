@@ -12,7 +12,6 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "preinstall": "npm install -g angular-cli@6.0.8",
     "postinstall": "ng build --aot -prod"
   },
   "private": true,
