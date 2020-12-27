@@ -19,6 +19,8 @@ export class SuperBannerComponent implements OnInit {
   async getBanner() {
     let data = await this.bannerService.getBannerData().toPromise();
     this.banner = data['product'];
+    if (this.banner.backgroundImg == '')
+      this.banner.backgroundImg = '../../assets/imgs/waves-2.png';
     console.log(this.banner);
   }
 
